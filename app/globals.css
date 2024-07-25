@@ -18,7 +18,7 @@ div {
 
 @keyframes blink {
   0% {
-    opacity: 1
+    opacity: 1;
   }
   to {
     opacity: 0;
@@ -34,8 +34,21 @@ div {
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .fade-in {
-  animation: fadeIn 1s ease-in-out forwards;
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
 }
 
 .footer {
@@ -57,31 +70,4 @@ div {
 
 .footer a:hover {
   color: #1da1f2; /* Change this to the hover color you prefer */
-}
-
-
-@keyframes draw-border {
-  from {
-    border-width: 0;
-  }
-  to {
-    border-width: 2px;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.draw-border {
-  animation: draw-border 1s forwards;
-}
-
-.fade-in {
-  animation: fade-in 1s forwards;
 }
