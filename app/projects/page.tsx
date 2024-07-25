@@ -3,6 +3,11 @@ import Link from 'next/link';
 import React from 'react';
 import{ useState } from 'react';
 
+import IdolShowdownDetails from './IdolShowdown';
+import SpatialStudyDetails from './SpatialStudy'
+import TwinShooterDetails from './TwinShooter';
+import WordguessrDetails from './WordGuessr';
+
 interface ProjectProps {
     title: string;
     description: string;
@@ -25,61 +30,36 @@ interface ProjectProps {
         </div>
       </div>
     );
-  }
+  };
   
-
   const projectsData = [
     {
       title: 'Idol Showdown',
       description: 'A fanmade Hololive Fighting Game with online and singleplayer content',
       link: '/projects/IdolShowdown',
-      imageUrl: '/IdolShowdown.jpg', // Replace with actual image URLs
-      details: (
-        <div>
-          <p>Detailed information about Idol Showdown project...</p>
-          <img src="/IdolShowdown-details.jpg" alt="Idol Showdown" />
-          <Link href="/projects/IdolShowdown" className="text-blue-500 hover:underline">View Project</Link>
-        </div>
-      ),
+      imageUrl: '/IdolShowdown.jpg',
+      details: IdolShowdownDetails,
     },
     {
       title: 'Twin Shooter',
       description: 'Solo Dev Project with hordes of enemies attacking you, which you must fend off',
       link: '/projects/TwinShooter',
-      imageUrl: '/TwinShooter.png', // Replace with actual image URLs
-      details: (
-        <div>
-          <p>Detailed information about Twin Shooter project...</p>
-          <img src="/TwinShooter-details.png" alt="Twin Shooter" />
-          <Link href="/projects/TwinShooter" className="text-blue-500 hover:underline">View Project</Link>
-        </div>
-      ),
+      imageUrl: '/TwinShooter.png',
+      details: TwinShooterDetails,
     },
     {
       title: 'Spatial Study',
       description: 'Hackathon Project that creates a more active, immersive educational experience for users',
       link: '/projects/Study',
-      imageUrl: '/SpatialStudy.png', // Replace with actual image URLs
-      details: (
-        <div>
-          <p>Detailed information about Spatial Study project...</p>
-          <img src="/SpatialStudy-details.png" alt="Spatial Study" />
-          <Link href="/projects/Study" className="text-blue-500 hover:underline">View Project</Link>
-        </div>
-      ),
+      imageUrl: '/SpatialStudy.png',
+      details: SpatialStudyDetails,
     },
     {
       title: 'Wordguessr',
       description: 'Final Project for my Software Engineering class where you guess the word in a certain number of guesses',
       link: '/projects/Wordguessr',
-      imageUrl: 'https://via.placeholder.com/400', // Replace with actual image URLs
-      details: (
-        <div>
-          <p>Detailed information about Wordguessr project...</p>
-          <img src="https://via.placeholder.com/400" alt="Wordguessr" />
-          <Link href="/projects/Wordguessr" className="text-blue-500 hover:underline">View Project</Link>
-        </div>
-      ),
+      imageUrl: 'https://via.placeholder.com/400',
+      details: WordguessrDetails,
     },
   ];
   
@@ -107,8 +87,12 @@ interface ProjectProps {
           ))}
         </div>
         {selectedProject && (
-          <div className="mt-8 p-4 border-4 border-white rounded bg-gray-900 text-white">
-            {projectsData.find((project) => project.title === selectedProject)?.details}
+          <div className="mt-8 p-4 border-4 border-white rounded bg-gray-900 text-white draw-border">
+            <div className="fade-in">
+              {React.createElement(
+                projectsData.find((project) => project.title === selectedProject)?.details || (() => null)
+              )}
+            </div>
           </div>
         )}
       </div>
