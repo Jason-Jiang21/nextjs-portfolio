@@ -60,7 +60,7 @@ const projectsData = [
     title: 'Wordguessr',
     description: 'Final Project for my Software Engineering class where you guess the word in a certain number of guesses',
     link: '/projects/Wordguessr',
-    imageUrl: 'https://via.placeholder.com/400',
+    imageUrl: '/WordGuessr.png',
     details: WordguessrDetails,
   },
 ];
