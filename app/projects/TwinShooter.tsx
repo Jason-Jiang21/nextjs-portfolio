@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 
 const TwinShooterDetails = () => {
@@ -17,7 +18,7 @@ const TwinShooterDetails = () => {
         </p>
         <div className='flex justify-between mt-5 mb-10'>
           <div className='border rounded p-2 w-[30%] text-center'>Role: Solo Developer</div>
-          <div className='border rounded p-2 w-[30%] text-center'>Worked from September 2023 to October 2023</div>
+          <div className='border rounded p-2 w-[30%] text-center'>Worked from September 2023 to the October 2023</div>
           <div className='border rounded p-2 w-[30%] text-center'>Languages: C# through Unity</div>
         </div>
         <h2 className='text-center text-xl mb-5'>Contributions</h2>
@@ -33,8 +34,8 @@ const TwinShooterDetails = () => {
         </ul>
         <h2 className='text-center text-xl mb-5'>Reflections</h2>
         <p>
-          It was my first time ever developing something in Unity without using any tutorials. I was often confused about how to
-          approach certain problems and sometimes I became frustrated that I didn't know more. However, I managed to persevere and
+          It was my first time ever developing something in Unity without using any tutorials. I was often confused on how to
+          approach a certain problem and sometimes I became frustrated that I didn&apos;t know more. However, I managed to persevere and
           code a beginner game that I am proud of.
         </p>
       </div>
