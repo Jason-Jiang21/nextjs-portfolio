@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import PropTypes from "prop-types";
 import YoutubeEmbed from './Youtube';
+import Image from 'next/image';
 
 const IdolShowdownDetails = () => {
   return (
@@ -13,8 +13,8 @@ const IdolShowdownDetails = () => {
         </h1>
         <h2 className='text-center mt-10 mb-5 text-xl'>Overview</h2>
         <p>
-          This is a passion project born from fans wanting to create something fun and special for fighting game and hololive fans allow
-          across the world. There was a lack of free fighting games, so the team decided to make one themselves.
+          This is a passion project born from fans wanting to create something fun and special for fighting game and hololive fans across
+          the world. There was a lack of free fighting games, so the team decided to make one themselves.
         </p>
         <div className='flex justify-between mt-5 mb-10'>
           <div className='border rounded p-2 w-[30%] text-center'>Role: SinglePlayer and UI Programmer</div>
@@ -23,8 +23,8 @@ const IdolShowdownDetails = () => {
         </div>
         <h2 className='text-center text-xl mb-5'>Contributions</h2>
         <div className='flex justify-between mt-5 mb-10'>
-          <img src='KiaraShop.png' className='w-[48%] rounded'/>
-          <img src='KiaraAchievement.png' className='w-[48%] rounded'/>
+          <Image src='/KiaraShop.png' className='w-[48%] rounded' alt='Kiara Shop' width={500} height={300} />
+          <Image src='/KiaraAchievement.png' className='w-[48%] rounded' alt='Kiara Achievement' width={500} height={300} />
         </div>
         <ul className='list-disc pl-5 mb-10'>
           <li>Developed new singleplayer mode features, including introducing new equipables and items.</li>
@@ -36,9 +36,9 @@ const IdolShowdownDetails = () => {
         <h2 className='text-center text-xl mb-5'>Reflections</h2>
         <p>
           It was my first time ever developing something with a group. For the first time, I had weekly meetings to 
-          discuss progress and future goals. I worked along with programmers, artists, designers, and several others
-          whiel contributing to this amazing project. I learned so much about good coding practices, game development ideas,
-          how to effectively commuicate with others, and how to step out of my confort zone learning everything as I went along.
+          discuss progress and future goals. I worked alongside programmers, artists, designers, and several others
+          while contributing to this amazing project. I learned so much about good coding practices, game development ideas,
+          how to effectively communicate with others, and how to step out of my comfort zone, learning everything as I went along.
         </p>
       </div>
     </div>
@@ -46,4 +46,3 @@ const IdolShowdownDetails = () => {
 };
 
 export default IdolShowdownDetails;
-
