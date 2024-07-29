@@ -18,7 +18,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, imageUrl, onClick
   return (
     <div
       onClick={onClick}
-      className="relative w-64 aspect-square border-4 border-white rounded-xl bg-gray-900 text-white overflow-hidden group cursor-pointer"
+      className="relative w-40 sm:w-64 aspect-square border-4 border-white rounded-xl bg-gray-900 text-white overflow-hidden group cursor-pointer"
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -27,7 +27,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, imageUrl, onClick
       <div className="relative z-10 flex justify-center h-full p-4">
         <h2 className="text-2xl text-center">{title}</h2>
       </div>
-      <div className="absolute inset-0 bg-gray-900 bg-opacity-75 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 p-4">
+      <div className="absolute inset-0 bg-gray-900 bg-opacity-75 opacity-0 sm:group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 p-4">
         <p className="text-white text-center">{description}</p>
       </div>
     </div>
@@ -90,6 +90,7 @@ export default function Projects() {
 
   return (
     <div className="bg-black min-h-screen p-4">
+      <title>Projects</title>
       <header className="bg-black text-white text-4xl font-bold text-center mb-8">
         Projects
       </header>

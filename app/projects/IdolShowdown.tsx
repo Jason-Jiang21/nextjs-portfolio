@@ -5,26 +5,27 @@ import Image from 'next/image';
 
 const IdolShowdownDetails = () => {
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-[853px]">
+    <div className="flex flex-col items-center p-4">
+      <div className="w-full max-w-[853px]">
         <YoutubeEmbed embedId="cTjtLdBLjNU?si=SE1qr1DDmsLqNzdh" />
-        <h1 className='text-center text-2xl mt-4'>Idol Showdown is a fighting game created by fans for fans with online mechanics,
+        <h1 className='text-center text-2xl mt-4'>
+          Idol Showdown is a fighting game created by fans for fans with online mechanics,
           singleplayer options, a training mode, as well as many others.
         </h1>
         <h2 className='text-center mt-10 mb-5 text-xl'>Overview</h2>
-        <p>
-          This is a passion project born from fans wanting to create something fun and special for fighting game and hololive fans across
+        <p className="text-center px-2">
+          This is a passion project born from fans wanting to create something fun and special for fighting game and Hololive fans across
           the world. There was a lack of free fighting games, so the team decided to make one themselves.
         </p>
-        <div className='flex justify-between mt-5 mb-10'>
-          <div className='border rounded p-2 w-[30%] text-center'>Role: SinglePlayer and UI Programmer</div>
-          <div className='border rounded p-2 w-[30%] text-center'>Worked from October 2023 to the present</div>
-          <div className='border rounded p-2 w-[30%] text-center'>Languages: C# through Unity</div>
+        <div className='flex flex-col sm:flex-row justify-between mt-5 mb-10'>
+          <div className='border rounded p-2 w-full sm:w-[30%] text-center mb-2 sm:mb-0'>Role: SinglePlayer and UI Programmer</div>
+          <div className='border rounded p-2 w-full sm:w-[30%] text-center mb-2 sm:mb-0'>Worked from October 2023 to present</div>
+          <div className='border rounded p-2 w-full sm:w-[30%] text-center'>Languages: C# through Unity</div>
         </div>
         <h2 className='text-center text-xl mb-5'>Contributions</h2>
-        <div className='flex justify-between mt-5 mb-10'>
-          <Image src='/KiaraShop.png' className='w-[48%] rounded' alt='Kiara Shop' width={500} height={300} />
-          <Image src='/KiaraAchievement.png' className='w-[48%] rounded' alt='Kiara Achievement' width={500} height={300} />
+        <div className='flex flex-col sm:flex-row justify-between mt-5 mb-10'>
+          <Image src='/KiaraShop.png' className='w-full sm:w-[48%] rounded mb-2 sm:mb-0' alt='Kiara Shop' width={500} height={300} />
+          <Image src='/KiaraAchievement.png' className='w-full sm:w-[48%] rounded' alt='Kiara Achievement' width={500} height={300} />
         </div>
         <ul className='list-disc pl-5 mb-10'>
           <li>Developed new singleplayer mode features, including introducing new equipables and items.</li>
@@ -34,7 +35,7 @@ const IdolShowdownDetails = () => {
           <li>Acquired and applied knowledge of unfamiliar Unity attributes to meet project requirements.</li>
         </ul>
         <h2 className='text-center text-xl mb-5'>Reflections</h2>
-        <p>
+        <p className="text-center px-2">
           It was my first time ever developing something with a group. For the first time, I had weekly meetings to 
           discuss progress and future goals. I worked alongside programmers, artists, designers, and several others
           while contributing to this amazing project. I learned so much about good coding practices, game development ideas,

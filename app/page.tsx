@@ -3,10 +3,15 @@ import { useTypewriter, Cursor } from 'nextjs-simple-typewriter';
 import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import Link from 'next/link'; // Import Link
+import Head from 'next/head';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-black">
+      <title>Jason Jiang Portfolio</title>
+      <Head>
+        <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon" />
+      </Head>
       <Intro />
     </main>
   );
