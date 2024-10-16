@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import Link from 'next/link'; // Import Link
 import Head from 'next/head';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {
   return (
@@ -66,6 +67,7 @@ const Intro = () => {
       </span>
       {showContent && <Description />}
       {showContent && <Footer />}
+      <Analytics />
     </div>
   );
 }
