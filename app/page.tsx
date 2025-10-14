@@ -156,7 +156,7 @@ const Description = () => {
     <div className="text-white text-center mb-16 mt-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
       <div className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-8 md:p-10">
         <p className="text-lg text-gray-100 leading-relaxed">
-          I'm a {age}-year-old developer majoring in <span className="text-cyan-400 font-semibold">Computer Science</span> and minoring in <span className="text-purple-400 font-semibold">Video Game Programming</span> at USC Viterbi School of Engineering.
+          I&apos;m a {age}-year-old developer majoring in <span className="text-cyan-400 font-semibold">Computer Science</span> and minoring in <span className="text-purple-400 font-semibold">Video Game Programming</span> at USC Viterbi School of Engineering.
         </p>
         <p className="text-gray-300 mt-4">
           Passionate about creating elegant solutions and immersive experiences that make a real impact.
