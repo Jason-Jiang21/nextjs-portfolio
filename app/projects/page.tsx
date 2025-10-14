@@ -1,5 +1,4 @@
 'use client'
-import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 import IdolShowdownDetails from './IdolShowdown';
@@ -75,7 +74,7 @@ export default function Projects() {
       setTimeout(() => {
         setSelectedProject(selectedProject === title ? null : title);
         setFadeClass('fade-in');
-      }, 1000); // Match with the CSS fade-out duration
+      }, 500);
     } else {
       setSelectedProject(title);
       setFadeClass('fade-in');
@@ -89,31 +88,37 @@ export default function Projects() {
   }, [selectedProject]);
 
   return (
-    <div className="bg-black min-h-screen p-4">
-      <title>Projects</title>
-      <header className="bg-black text-white text-4xl font-bold text-center mb-8">
-        Projects
-      </header>
-      <div className="flex flex-wrap justify-center gap-4">
-        {projectsData.map((project, index) => (
-          <Project
-            key={index}
-            title={project.title}
-            description={project.description}
-            imageUrl={project.imageUrl}
-            onClick={() => handleProjectClick(project.title)}
-          />
-        ))}
-      </div>
-      {selectedProject && (
-        <div className={`mt-8 p-4 border-4 border-white rounded bg-gray-900 text-white relative draw-border ${fadeClass}`}>
-          <div>
-            {React.createElement(
-              projectsData.find((project) => project.title === selectedProject)?.details || (() => null)
-            )}
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900">
+      <div className="p-4">
+        <div className="text-white text-2xl font-bold mb-12 pt-2">
+          <a href="/" className="hover:text-gray-300 transition-colors">
+            Jason Jiang
+          </a>
         </div>
-      )}
+        <div className="text-white text-4xl font-bold text-center mb-12">
+          Projects
+        </div>
+        <div className="flex flex-wrap justify-center gap-4">
+          {projectsData.map((project, index) => (
+            <Project
+              key={index}
+              title={project.title}
+              description={project.description}
+              imageUrl={project.imageUrl}
+              onClick={() => handleProjectClick(project.title)}
+            />
+          ))}
+        </div>
+        {selectedProject && (
+          <div className={`mt-8 p-4 border-4 border-white rounded bg-gray-900 text-white max-w-4xl mx-auto ${fadeClass}`}>
+            <div>
+              {React.createElement(
+                projectsData.find((project) => project.title === selectedProject)?.details || (() => null)
+              )}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
