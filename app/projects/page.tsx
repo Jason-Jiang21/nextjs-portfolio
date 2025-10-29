@@ -5,6 +5,8 @@ import IdolShowdownDetails from './IdolShowdown';
 import SpatialStudyDetails from './SpatialStudy';
 import TwinShooterDetails from './TwinShooter';
 import WordguessrDetails from './WordGuessr';
+import MochikoDetails from './Mochiko';
+import MumeiDetails from './Mumei';
 
 interface ProjectProps {
   title: string;
@@ -62,6 +64,20 @@ const projectsData = [
     imageUrl: '/WordGuessr.png',
     details: WordguessrDetails,
   },
+  {
+    title: 'Mochiko',
+    description: 'Electron made Personal Project to study modern-day tech stacks using typescript and AWS',
+    link: '/projects/Mochiko',
+    imageUrl: '/MochikoSlime.png',
+    details: MochikoDetails,
+  },
+  {
+    title: 'Mumei: Last Promise',
+    description: 'A 3D game in tribute of Nanashi Mumei of Hololive',
+    link: '/projects/Mumei',
+    imageUrl: '/MumeiTitle.png',
+    details: MumeiDetails
+  }
 ];
 
 export default function Projects() {
