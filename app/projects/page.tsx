@@ -7,6 +7,7 @@ import TwinShooterDetails from './TwinShooter';
 import WordguessrDetails from './WordGuessr';
 import MochikoDetails from './Mochiko';
 import MumeiDetails from './Mumei';
+import { Analytics } from '@vercel/analytics/react';
 
 interface ProjectProps {
   title: string;
@@ -125,6 +126,7 @@ export default function Projects() {
             />
           ))}
         </div>
+        <Analytics />
         {selectedProject && (
           <div className={`mt-8 p-4 border-4 border-white rounded bg-gray-900 text-white max-w-4xl mx-auto ${fadeClass}`}>
             <div>
