@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {
   return (
@@ -161,6 +162,7 @@ const Description = () => {
         <p className="text-gray-300 mt-4">
           Passionate about creating elegant solutions and immersive experiences that make a real impact.
         </p>
+        <Analytics />
       </div>
     </div>
   );
